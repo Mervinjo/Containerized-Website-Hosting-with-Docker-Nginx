@@ -9,10 +9,10 @@ This capstone project is a fully responsive, front-end website developed for an 
 This capstone project involves containerizing a static educational website (based on an HTML/CSS/SASS/JS template from Envato Elements) using Docker. The primary goal is to gain hands-on experience with building, running, and managing containerized front-end applications.
 
 🎓 What You'll Learn
+
 ✅ 1. Docker Fundamentals
 Writing a Dockerfile to containerize a static web app using a lightweight web server (e.g., Nginx or httpd).
 Understanding base images, COPY, WORKDIR, and EXPOSE directives.
-
 
 ✅ 2. Docker Image Creation
 Building custom images for front-end deployment.
