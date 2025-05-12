@@ -35,14 +35,23 @@ Tagging and pushing to Docker Hub.
 
 🗂️ Project Structure (Simplified)
 school-website/
+
 ├── Dockerfile
+
 ├── nginx/
+
 │   └── nginx.conf
+
 ├── public/
+
 │   ├── index.html
+
 │   ├── css/
+
 │   ├── js/
+
 │   └── assets/
+
 └── docker-compose.yml (optional)
 
 
