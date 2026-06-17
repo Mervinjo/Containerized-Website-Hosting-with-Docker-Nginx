@@ -1,63 +1,108 @@
-# Deploying a fully responsive frontend website for an educational insitute using Docker
+# Containerized Website Hosting with Docker & Nginx
 
-🌐 Project Overview
-This capstone project is a fully responsive, front-end website developed for an educational institution. It is based on a professionally designed template sourced from Envato Elements, which was customized and extended using modern front-end technologies including HTML, CSS, SASS, and JavaScript.
+## Project Overview
 
-🐳 Capstone Project: Containerizing a Static Website with Docker
+This project demonstrates how I containerized and deployed a static educational website using Docker and Nginx.
 
-🧭 Project Overview
-This capstone project involves containerizing a static educational website (based on an HTML/CSS/SASS/JS template from Envato Elements) using Docker. The primary goal is to gain hands-on experience with building, running, and managing containerized front-end applications.
+The primary objective of this project was to gain practical experience with Docker by packaging a front-end web application into a portable container that can run consistently across different environments.
 
-🎓 What You'll Learn
+Instead of focusing on website development, this project focuses on the complete containerization workflow, including building Docker images, running containers, exposing ports, and serving static web content through Nginx.
 
-✅ 1. Docker Fundamentals
-Writing a Dockerfile to containerize a static web app using a lightweight web server (e.g., Nginx or httpd).
-Understanding base images, COPY, WORKDIR, and EXPOSE directives.
+---
 
-✅ 2. Docker Image Creation
-Building custom images for front-end deployment.
-Optimizing image size and structure for production.
+## Technologies Used
 
-✅ 3. Serving Static Content with Nginx
-Configuring Nginx in a container to serve HTML, CSS, and JS assets.
-Adding a custom nginx.conf file to control routing, caching, and error handling.
+* Docker
+* Nginx
+* HTML
+* CSS
+* JavaScript
 
-✅ 4. Docker Volumes (Optional Enhancement)
-Using bind mounts or named volumes to live-reload content during development.
+---
 
-✅ 5. Docker Compose (Optional for Extension)
-Adding Docker Compose to manage Nginx + potential extensions (e.g., analytics or form backend stubs) with one command.
+## Project Structure
 
-✅ 6. Deployment Readiness
-Testing and running the container locally (docker run).
-Tagging and pushing to Docker Hub.
-
-
-🗂️ Project Structure (Simplified)
-school-website/
+```text
+Docker-Capstone-Project1/
 
 ├── Dockerfile
+├── README.md
+└── school-website/
+    ├── index.html
+    ├── css/
+    ├── js/
+    ├── images/
+    └── assets/
+```
 
-├── nginx/
+---
 
-│   └── nginx.conf
+## Docker Implementation
 
-├── public/
+### Dockerfile
 
-│   ├── index.html
+A custom Dockerfile was created to:
 
-│   ├── css/
+1. Use an Nginx base image.
+2. Copy website files into the Nginx web root directory.
+3. Configure the container to serve the static website.
+4. Expose the required HTTP port.
 
-│   ├── js/
+### Build Docker Image
 
-│   └── assets/
+```bash
+docker build -t educational-website .
+```
 
-└── docker-compose.yml (optional)
+### Run Docker Container
 
+```bash
+docker run -d -p 8080:80 educational-website
+```
 
-📦 Key Docker Skills Demonstrated
-- Writing and building a Dockerfile for a static web server
-- Understanding container lifecycle: build → run → stop → remove
-- Managing ports, volumes, and static content in containers
-- Basic use of Docker Compose for service orchestration
-- Containerizing front-end workflows for scalable deployment
+The website becomes accessible through the mapped host port while being served from inside the container by Nginx.
+
+---
+
+## Docker Concepts Demonstrated
+
+* Building custom Docker images
+* Writing Dockerfiles
+* Containerizing static web applications
+* Using Nginx inside containers
+* Port mapping between host and container
+* Running containers in detached mode
+* Managing container lifecycle
+* Image creation and deployment
+* Container isolation and portability
+
+---
+
+## Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+* Creating and managing Docker images
+* Deploying static websites inside containers
+* Understanding the Docker build process
+* Working with Nginx as a containerized web server
+* Running and managing containers using Docker CLI
+* Publishing containerized applications for deployment
+
+---
+
+## Future Improvements
+
+* Multi-stage Docker builds
+* Docker Compose integration
+* CI/CD pipeline automation
+* Deployment to AWS EC2
+* Container orchestration using Kubernetes
+
+---
+
+## Author
+
+**Mervin Shaji**
+
+Containerized Website Hosting with Docker & Nginx
